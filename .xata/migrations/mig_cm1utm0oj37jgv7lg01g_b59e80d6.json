@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm1utm0oj37jgv7lg01g",
+  "parentID": "mig_cm1utcdl441dff780sp0",
+  "checksum": "1:b59e80d69fd0f361e0914cc01dff4abf4ec46dcbb34aebe095c3fa1ed017167b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "amount",
+          "type": "float"
+        },
+        "table": "Transaction"
+      }
+    }
+  ]
+}

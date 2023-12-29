@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://main-sv67m5.us-west-2.xata.sh/db/budget-keeper",
+  "codegen": {
+    "output": "]src/lib/xata.ts"
+  }
+}
