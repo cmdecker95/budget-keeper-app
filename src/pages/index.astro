@@ -1,12 +1,4 @@
 ---
-// Generated with CLI
-import { getXataClient } from "../lib/xata";
-
-const xata = getXataClient();
-
-const records = await xata.db.transactions.getAll()
-
-console.log(records);
 
 ---
 
@@ -19,9 +11,6 @@ console.log(records);
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Testing</h1>
-        <ul>
-            {records.map(r => (<li>{r}</li>))}
-        </ul>
+		<h1>Astro</h1>
 	</body>
 </html>
