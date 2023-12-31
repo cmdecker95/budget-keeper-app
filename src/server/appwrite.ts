@@ -1,4 +1,4 @@
-import { Client, Databases, Account } from "appwrite";
+import { Client, Databases, Account, AppwriteException } from "appwrite";
 
 
 export const appwriteConfig = {
@@ -17,7 +17,11 @@ export const account = new Account(client);
 
 
 export async function signin(email: string, password: string) {
-  const response = await account.createEmailSession(email, password);
+  try {
+    const response = await account.createEmailSession(email, password);
+    console.dir(`Session created: ${response}`)
+  } catch (e) {
+    console.error(e)
+  }
 
-  console.dir(`Session created: ${response}`)
 }
