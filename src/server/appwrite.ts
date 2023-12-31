@@ -1,4 +1,4 @@
-import { Client, Databases, Account, ID } from "appwrite";
+import { Client, Databases, Account } from "appwrite";
 
 
 export const appwriteConfig = {
@@ -14,3 +14,10 @@ const client = new Client()
 
 export const db = new Databases(client);
 export const account = new Account(client);
+
+
+export async function signin(email: string, password: string) {
+  const response = await account.createEmailSession(email, password);
+
+  console.dir(`Session created: ${response}`)
+}
