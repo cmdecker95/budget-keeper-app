@@ -1,7 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import SigninForm from "@components/SigninForm.svelte";
 ---
 
 <Layout title="Budget Keeper">
   <h1>Budget Keeper</h1>
+
+  <SigninForm client:load />
 </Layout>
