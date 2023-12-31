@@ -1,10 +1,12 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import SigninForm from "@components/SigninForm.svelte";
+
+// TODO: If the user is logged out, redirect to signin
+// return Astro.redirect("/signin");
 ---
 
 <Layout title="Budget Keeper">
   <h1>Budget Keeper</h1>
 
-  <SigninForm client:load />
+  <p>You're logged in!</p>
 </Layout>
