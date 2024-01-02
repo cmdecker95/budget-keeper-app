@@ -1,7 +1,6 @@
 <script lang="ts">
   let email: string = "";
   let password: string = "";
-
   let isLoading: boolean = false;
 
   async function submitForm(e: Event) {
