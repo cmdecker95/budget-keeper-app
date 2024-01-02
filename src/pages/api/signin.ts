@@ -2,7 +2,7 @@ import { type APIRoute } from "astro";
 import { response } from "@server/utils";
 import { signIn } from "@server/auth";
 
-export const POST: APIRoute = async ({ request, cookies, redirect }) => {
+export const POST: APIRoute = async ({ request, cookies }) => {
   try {
 
     // Authenticate user
@@ -10,7 +10,12 @@ export const POST: APIRoute = async ({ request, cookies, redirect }) => {
 
     // Create session and generate JWT
     const token = await signIn(email, password);
-    cookies.set("token", token);
+
+    cookies.set("token", token, {
+      expires: new Date(new Date().setDate(new Date().getDate() + 7)),
+      httpOnly: true,
+      path: "/"
+    });
 
   } catch (error) {
     return response(401, { error: "Unauthorized" })

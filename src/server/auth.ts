@@ -47,7 +47,6 @@ export async function signIn(email: string, password: string): Promise<string | 
   return token;
 }
 
-export async function isSignedIn(cookies: AstroCookies): Promise<boolean | never> {
   if (!cookies || !cookies.has("token")) {
     return false; // JWT cookie was not there
   }

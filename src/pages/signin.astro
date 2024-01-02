@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import SigninForm from "@components/SigninForm.svelte";
 import { isSignedIn } from "@server/auth";
 
-if (await isSignedIn(Astro.cookies)) {
+if (isSignedIn(Astro.cookies)) {
   return Astro.redirect("/");
 }
 ---
