@@ -1,20 +1,20 @@
 import { type APIRoute } from "astro";
-import { signin } from "@server/appwrite";
 import { respond } from "@server/utils";
 
 export const POST: APIRoute = async ({ request }) => {
-  if (request.headers.get("Content-Type") === "application/json") {
-    const { email, password } = await request.json();
+  let email;
+  let password;
 
-    const response = await signin(email, password);
+  try {
+    const data = await request.json();
 
-    // TODO: Parse response
-    console.dir(`Response from signin in api/signin: ${response}`)
+    email = data.email;
+    password = data.password;
 
-    return respond(200, { data: { message: "Well done!" } })
-
+  } catch (error) {
+    return respond(400, { error: "Invalid request. Confirm your request body is in valid JSON format." })
   }
 
-  return respond(400, { error: { message: "Expected JSON..." } })
 
+  return respond(200, { data: "OK" })
 }

@@ -5,6 +5,9 @@ interface ImportMeta {
 }
 
 interface ImportMetaEnv {
-  readonly APPWRITE_ENDPOINT: string;
-  readonly APPWRITE_PROJECT_ID: string;
+}
+
+interface UserCredentials {
+  email: string;
+  password: string;
 }
