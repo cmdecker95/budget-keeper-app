@@ -76,15 +76,20 @@ const tables = [
   {
     name: "user",
     columns: [
-      { name: "email", type: "email" },
       { name: "password", type: "string" },
+      { name: "email", type: "email", unique: true },
     ],
   },
   {
     name: "session",
     columns: [
-      { name: "expirationDate", type: "datetime" },
       { name: "userId", type: "string" },
+      {
+        name: "expirationDate",
+        type: "datetime",
+        notNull: true,
+        defaultValue: "now",
+      },
     ],
   },
 ] as const;
