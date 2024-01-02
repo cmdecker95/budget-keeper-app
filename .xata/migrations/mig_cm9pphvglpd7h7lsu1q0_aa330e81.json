@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9pphvglpd7h7lsu1q0",
+  "parentID": "mig_cm9ppbfglpd7h7lsu1p0",
+  "checksum": "1:aa330e81d97ab26d1db3c72588fd9ba0faa44cf69cb1bd38f46d54dcb6b98a52",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string"
+        },
+        "table": "cashAccount"
+      }
+    }
+  ]
+}

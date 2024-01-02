@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q8avglpd7h7lsu35g",
+  "parentID": "mig_cm9q89d0fhs7m8g3jd8g",
+  "checksum": "1:eaac25c5fc14400b06eccc079460d350a43bd855f375f2fb85a92d499afccfa9",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "sectionId",
+          "type": "string"
+        },
+        "table": "transaction"
+      }
+    }
+  ]
+}

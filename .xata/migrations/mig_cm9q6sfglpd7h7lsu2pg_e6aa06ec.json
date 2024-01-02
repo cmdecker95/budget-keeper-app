@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q6sfglpd7h7lsu2pg",
+  "parentID": "mig_cm9q6ifglpd7h7lsu2og",
+  "checksum": "1:e6aa06ec0f6e24f0697d617d7e8656f106daed8fa1783ed587c6ed4790c4a76a",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "baseline",
+          "type": "float"
+        },
+        "table": "section"
+      }
+    }
+  ]
+}

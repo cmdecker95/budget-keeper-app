@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9ppu7glpd7h7lsu1tg",
+  "parentID": "mig_cm9pps7glpd7h7lsu1sg",
+  "checksum": "1:392fb8e189b1e2a562517833adea95f15267d77988cdcb9ed58f9849c8a61815",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "name",
+          "type": "string"
+        },
+        "table": "debtAccount"
+      }
+    }
+  ]
+}

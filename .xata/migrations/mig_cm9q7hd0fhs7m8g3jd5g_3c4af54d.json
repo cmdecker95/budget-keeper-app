@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q7hd0fhs7m8g3jd5g",
+  "parentID": "mig_cm9q7bvglpd7h7lsu2t0",
+  "checksum": "1:3c4af54d35e22dfda13606d5b7a2d56de9150cfcf8c14a9773bf08ba362657ab",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "transactor",
+          "type": "string"
+        },
+        "table": "expense"
+      }
+    }
+  ]
+}

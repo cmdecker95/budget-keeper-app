@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9pq0fglpd7h7lsu1ug",
+  "parentID": "mig_cm9ppu7glpd7h7lsu1tg",
+  "checksum": "1:82e90f79a2cc73b2a4a3622f0f4412367a8f921de043bd3917082f79cdc41581",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "baseline",
+          "type": "float"
+        },
+        "table": "debtAccount"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9pqsnglpd7h7lsu270",
+  "parentID": "mig_cm9pqnvglpd7h7lsu260",
+  "checksum": "1:c563eba2090bf29cc8c10ec4852ea59aad28e7eb73745d6b28be2c2d75464c46",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "cashAccounts",
+          "type": "multiple"
+        },
+        "table": "keeper"
+      }
+    }
+  ]
+}

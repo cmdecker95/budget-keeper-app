@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q8050fhs7m8g3jd7g",
+  "parentID": "mig_cm9q7u7glpd7h7lsu31g",
+  "checksum": "1:e30303895d0f0f85c38768cc775cc207a11c54e77d0cd1a6d2dd05a3e2842d0d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "amount",
+          "type": "float"
+        },
+        "table": "transaction"
+      }
+    }
+  ]
+}

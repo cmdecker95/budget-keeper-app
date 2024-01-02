@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q3bnglpd7h7lsu2j0",
+  "parentID": "mig_cm9q31vglpd7h7lsu2i0",
+  "checksum": "1:ab3d5cc4ecf3eb011998663442ba2122363ae250438923d0c09b479609a8d4f1",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "baseline",
+          "type": "float"
+        },
+        "table": "budget"
+      }
+    }
+  ]
+}

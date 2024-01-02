@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9qaq7glpd7h7lsu390",
+  "parentID": "mig_cm9qao7glpd7h7lsu380",
+  "checksum": "1:379cf820d4577d3c39d2f3afe0eb14aa7f38fad4a85f08886c50151a39a6ea41",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "email",
+          "type": "email"
+        },
+        "table": "user"
+      }
+    }
+  ]
+}

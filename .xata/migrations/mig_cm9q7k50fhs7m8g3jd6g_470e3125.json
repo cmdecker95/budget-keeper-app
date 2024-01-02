@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q7k50fhs7m8g3jd6g",
+  "parentID": "mig_cm9q7inglpd7h7lsu2u0",
+  "checksum": "1:470e3125d0c1f5f9dc96e416607f7a19e26d9cc313c264510f5934377cd43264",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "verified",
+          "type": "bool"
+        },
+        "table": "expense"
+      }
+    }
+  ]
+}

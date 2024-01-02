@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9ppqfglpd7h7lsu1r0",
+  "parentID": "mig_cm9pphvglpd7h7lsu1q0",
+  "checksum": "1:5d952ab346a4f6a2363aa4ad6d5e74ff79a58f4f49fd6f5d636daac88398a07b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "baseline",
+          "type": "float"
+        },
+        "table": "cashAccount"
+      }
+    }
+  ]
+}

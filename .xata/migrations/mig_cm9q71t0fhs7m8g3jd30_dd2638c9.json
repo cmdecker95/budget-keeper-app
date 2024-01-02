@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9q71t0fhs7m8g3jd30",
+  "parentID": "mig_cm9q6sfglpd7h7lsu2pg",
+  "checksum": "1:dd2638c9c60240da145733c6a39f718aac041cd64ad62cb32598f44a970cdeda",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "budgetId",
+          "type": "string"
+        },
+        "table": "section"
+      }
+    }
+  ]
+}

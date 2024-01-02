@@ -1,0 +1,12 @@
+{
+  "id": "mig_cm9pps7glpd7h7lsu1sg",
+  "parentID": "mig_cm9ppqfglpd7h7lsu1r0",
+  "checksum": "1:ed67cc18a4e58ca5fae02a807ce2b3169012de0a23561bb70464e325918a27ab",
+  "operations": [
+    {
+      "addTable": {
+        "table": "debtAccount"
+      }
+    }
+  ]
+}

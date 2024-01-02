@@ -1,0 +1,16 @@
+{
+  "id": "mig_cm9qd8t0fhs7m8g3jdd0",
+  "parentID": "mig_cm9qcgd0fhs7m8g3jdc0",
+  "checksum": "1:31fd62a77a56f06b5dce28415892f8585ffa6f48c4ec3a2dd40274131c627f5c",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "expirationDate",
+          "type": "datetime"
+        },
+        "table": "session"
+      }
+    }
+  ]
+}

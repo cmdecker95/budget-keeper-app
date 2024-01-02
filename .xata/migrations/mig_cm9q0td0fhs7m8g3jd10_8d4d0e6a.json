@@ -1,0 +1,19 @@
+{
+  "id": "mig_cm9q0td0fhs7m8g3jd10",
+  "parentID": "mig_cm9q0ol0fhs7m8g3jd00",
+  "checksum": "1:8d4d0e6ae9887f6883c9604491bfaebe08ece003fc23585cfd44177771db8ddc",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "keeperId",
+          "type": "link",
+          "link": {
+            "table": "keeper"
+          }
+        },
+        "table": "debtAccount"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "mig_cm9q04vglpd7h7lsu2bg",
+  "parentID": "mig_cm9pqsnglpd7h7lsu270",
+  "checksum": "1:0d890211a8d2a62c7fba2a17bc4de0b7ce9fa726b407c9d0b85fcb2d67544646",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "cashAccountIds",
+        "oldName": "cashAccounts",
+        "table": "keeper"
+      }
+    }
+  ]
+}
