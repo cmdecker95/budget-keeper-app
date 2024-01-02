@@ -5,9 +5,16 @@ interface ImportMeta {
 }
 
 interface ImportMetaEnv {
+  readonly JWT_SECRET: string;
 }
 
 interface UserCredentials {
   email: string;
   password: string;
+}
+
+interface TokenPayload {
+  userId: string;
+  sessionId: string;
+  expirationDate: Date;
 }

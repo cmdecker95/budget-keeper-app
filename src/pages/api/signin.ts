@@ -1,20 +1,20 @@
 import { type APIRoute } from "astro";
-import { respond } from "@server/utils";
+import { response } from "@server/utils";
+import { signIn } from "@server/auth";
 
-export const POST: APIRoute = async ({ request }) => {
-  let email;
-  let password;
-
+export const POST: APIRoute = async ({ request, cookies, redirect }) => {
   try {
-    const data = await request.json();
 
-    email = data.email;
-    password = data.password;
+    // Authenticate user
+    const { email, password } = await request.json() as UserCredentials;
+
+    // Create session and generate JWT
+    const token = await signIn(email, password);
+    cookies.set("token", token);
 
   } catch (error) {
-    return respond(400, { error: "Invalid request. Confirm your request body is in valid JSON format." })
+    return response(401, { error: "Unauthorized" })
   }
 
-
-  return respond(200, { data: "OK" })
+  return response(200, { data: { success: true } })
 }

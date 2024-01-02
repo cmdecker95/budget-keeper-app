@@ -1,3 +1,3 @@
-export function respond(status: number, body: object) {
+export function response(status: number, body: object): Response {
   return new Response(JSON.stringify(body), { status });
 }

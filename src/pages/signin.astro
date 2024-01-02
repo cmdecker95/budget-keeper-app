@@ -1,9 +1,11 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import SigninForm from "@components/SigninForm.svelte";
+import { isSignedIn } from "@server/auth";
 
-// TODO: If the user is logged in, redirect to dashboard
-// return Astro.redirect("/");
+if (await isSignedIn(Astro.cookies)) {
+  return Astro.redirect("/");
+}
 ---
 
 <Layout title="Budget Keeper">

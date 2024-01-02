@@ -1,8 +1,10 @@
 ---
 import Layout from "@layouts/Layout.astro";
+import { isSignedIn } from "@server/auth";
 
-// TODO: If the user is logged out, redirect to signin
-// return Astro.redirect("/signin");
+if (!isSignedIn(Astro.cookies)) {
+  return Astro.redirect("/signin");
+}
 ---
 
 <Layout title="Budget Keeper">
