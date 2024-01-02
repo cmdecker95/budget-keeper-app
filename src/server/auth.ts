@@ -44,23 +44,34 @@ export async function signIn(email: string, password: string): Promise<string | 
   }
 
   const token = signJwt(tokenPayload);
+
+  console.log("JWT was successfully generated:")
+  console.log(token)
+
   return token;
 }
 
+export function isSignedIn(cookies: AstroCookies): boolean {
   if (!cookies || !cookies.has("token")) {
-    return false; // JWT cookie was not there
+    console.log("JWT cookie was not there.")
+    return false;
   }
 
   const token = cookies.get("token")!.value;
 
   if (!verifyJwt(token)) {
-    return false; // JWT cookie was malformed or empty
+    console.log("JWT cookie was malformed or empty.")
+    return false;
   }
 
   const tokenPayload = decodeJwt(token);
 
+  console.log("in isSignedIn, checking payload")
+  console.dir(tokenPayload)
+
   if (new Date() >= tokenPayload.expirationDate) {
-    return false; // JWT cookie is expired
+    console.log("JWT cookie is expired.")
+    return false;
   }
 
   return true;

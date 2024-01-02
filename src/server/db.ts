@@ -9,6 +9,9 @@ export async function getUser(email: string, password: string): Promise<UserReco
     throw Error("Invalid password");
   }
 
+  console.log("User successfully returned from Xata:")
+  console.dir(user)
+
   return user;
 }
 
@@ -17,6 +20,9 @@ export async function createSession(userId: string): Promise<SessionRecord | nev
     userId,
     expirationDate: new Date(new Date().setDate(new Date().getDate() + 7)),
   });
+
+  console.log("Session successfully returned from Xata:")
+  console.dir(session)
 
   return session;
 }
