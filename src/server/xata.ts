@@ -80,7 +80,13 @@ const tables = [
       { name: "password", type: "string" },
     ],
   },
-  { name: "session", columns: [{ name: "expirationDate", type: "datetime" }] },
+  {
+    name: "session",
+    columns: [
+      { name: "expirationDate", type: "datetime" },
+      { name: "userId", type: "string" },
+    ],
+  },
 ] as const;
 
 export type SchemaTables = typeof tables;
