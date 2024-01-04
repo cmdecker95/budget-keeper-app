@@ -35,6 +35,7 @@ export async function signIn(email: string, password: string): Promise<string | 
 
   // Get keeper
   const keeper = await getKeeper(user.id);
+
   // Create session
   const session = await createSession(user.id);
 

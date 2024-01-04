@@ -21,6 +21,12 @@ export async function getKeeper(userId: string): Promise<KeeperRecord | never> {
   return keeper;
 }
 
+export async function getBudgets(keeperId: string): Promise<BudgetRecord[] | never> {
+  const budgets = await xata.db.budget.filter("keeperId", keeperId).getAll();
+
+  return budgets;
+}
+
 export async function createSession(userId: string): Promise<SessionRecord | never> {
   const session = await xata.db.session.create({
     userId,
@@ -32,3 +38,4 @@ export async function createSession(userId: string): Promise<SessionRecord | nev
 
   return session;
 }
+

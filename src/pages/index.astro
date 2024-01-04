@@ -1,14 +1,29 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import { isSignedIn } from "@server/auth";
+import Nav from "@components/Nav.svelte";
+import BudgetsTable from "@components/BudgetsTable.svelte";
+import CashAccountsTable from "@components/CashAccountsTable.svelte";
+import DebtAccountsTable from "@components/DebtAccountsTable.svelte";
+
+import { decodeJwt, isSignedIn } from "@server/auth";
+import { getBudgets } from "@server/db";
 
 if (!isSignedIn(Astro.cookies)) {
   return Astro.redirect("/signin");
 }
+
+const token = Astro.cookies.get("token")!.value;
+const { keeperId } = decodeJwt(token);
+
+const budgets = await getBudgets(keeperId);
+const cashAccounts = await getCashAccounts(keeperId);
+const debtAccounts = await getDebtAccounts(keeperId);
 ---
 
 <Layout title="Budget Keeper">
-  <h1>Budget Keeper</h1>
-
-  <p>You're logged in!</p>
+  <Nav client:load />
+  <BudgetsTable budgets={budgets} client:load />
+  <CashAccountsTable cashAccounts={cashAccounts} client:load />
+  <debtAccountsTable debtAccounts={debtAccounts} client:load
+  ></debtAccountsTable>
 </Layout>
