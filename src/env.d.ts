@@ -15,6 +15,7 @@ interface UserCredentials {
 
 interface TokenPayload {
   userId: string;
+  keeperId: string;
   sessionId: string;
   expirationDate: Date;
 }

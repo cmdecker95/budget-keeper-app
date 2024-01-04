@@ -1,6 +1,6 @@
 import type { AstroCookies } from "astro";
 import jwt from "jsonwebtoken";
-import { createSession, getUser } from "@server/db";
+import { createSession, getKeeper, getUser } from "@server/db";
 
 const jwtSecret = import.meta.env.JWT_SECRET as jwt.Secret;
 
@@ -33,12 +33,15 @@ export async function signIn(email: string, password: string): Promise<string | 
   // Authenticate user
   const user = await getUser(email, password);
 
+  // Get keeper
+  const keeper = await getKeeper(user.id);
   // Create session
   const session = await createSession(user.id);
 
   // Get session JWT
   const tokenPayload: TokenPayload = {
     userId: user.id,
+    keeperId: keeper.id,
     sessionId: session.id,
     expirationDate: session.expirationDate,
   }

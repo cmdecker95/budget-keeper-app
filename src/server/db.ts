@@ -1,4 +1,4 @@
-import { getXataClient, type UserRecord, type SessionRecord } from "@server/xata";
+import { getXataClient, type KeeperRecord, type SessionRecord, type BudgetRecord, type UserRecord } from "@server/xata";
 
 const xata = getXataClient();
 
@@ -13,6 +13,12 @@ export async function getUser(email: string, password: string): Promise<UserReco
   console.dir(user)
 
   return user;
+}
+
+export async function getKeeper(userId: string): Promise<KeeperRecord | never> {
+  const keeper = await xata.db.keeper.filter("userId", userId).getFirstOrThrow();
+
+  return keeper;
 }
 
 export async function createSession(userId: string): Promise<SessionRecord | never> {
