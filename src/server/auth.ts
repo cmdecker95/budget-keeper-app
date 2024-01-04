@@ -4,7 +4,7 @@ import { createSession, getUser } from "@server/db";
 
 const jwtSecret = import.meta.env.JWT_SECRET as jwt.Secret;
 
-function verifyJwt(token: string): boolean {
+export function verifyJwt(token: string): boolean {
   if (!token) {
     return false; // JWT cookie not in client cookie jar
   }
@@ -18,13 +18,13 @@ function verifyJwt(token: string): boolean {
   return true;
 }
 
-function signJwt(tokenPayload: TokenPayload): string {
+export function signJwt(tokenPayload: TokenPayload): string {
   return jwt.sign(tokenPayload, jwtSecret, {
     expiresIn: 60 * 60 * 24 * 7
   });
 }
 
-function decodeJwt(token: string): TokenPayload {
+export function decodeJwt(token: string): TokenPayload {
   return jwt.decode(token, jwtSecret);
 }
 
